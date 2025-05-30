@@ -11,7 +11,12 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       output: {
-        assetFileNames: 'assets/[name][extname]'
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'style.css') return 'assets/[name][extname]';
+          return 'assets/[name][extname]';
+        },
+        chunkFileNames: 'assets/[name].js',
+        entryFileNames: 'assets/[name].js',
       }
     }
   }
