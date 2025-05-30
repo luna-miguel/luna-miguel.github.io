@@ -21,4 +21,6 @@ export default defineConfig({
       },
     },
   },
+  publicDir: 'public',
+  assetsInclude: ['**/*.jpg', '**/*.png', '**/*.JPG'],
 })
