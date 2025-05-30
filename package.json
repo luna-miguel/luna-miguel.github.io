@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
+  "homepage": "https://luna-miguel.github.io/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
