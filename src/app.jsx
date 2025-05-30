@@ -915,7 +915,7 @@ function App() {
                   setIsCarouselTransitioning(false);
                 }}
               >
-                <img src={process.env.PUBLIC_URL+items[currentCarouselIndex].image} alt={items[currentCarouselIndex].title} />
+                <img src={items[currentCarouselIndex].image} alt={items[currentCarouselIndex].title} />
                 <p className="carousel-caption">{items[currentCarouselIndex].title}</p>
               </motion.div>
             </AnimatePresence>
@@ -1053,7 +1053,7 @@ function App() {
                         exit={mode === 7 ? false : { WebkitMaskImage: `repeating-linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%)`, transition: { duration: 0.3, ease: "linear" } }}
                         transition={mode === 7 ? undefined : { duration: 1, ease: "linear" }}
                       >
-                        <img id='image' src={process.env.PUBLIC_URL+imageMap[imageIndex]} alt="Image" />
+                        <img id='image' src={imageMap[imageIndex]} alt="Image" />
                         {mode === 0 && (
                           <div className="welcome-text">
                             <TypeAnimation
