@@ -5,22 +5,24 @@ import { useForm } from '@formspree/react';
 import './index.css'
 import React from 'react';
 
-import image0 from "assets/0.jpg";
-import image1 from "assets/1.JPG";
-import image2 from "assets/2.JPG";
-import image3 from "assets/3.jpg";
-import image4 from "assets/chat.png";
-import quizcreator from "assets/quizcreator.png";
-import shootingwatch from "assets/shootingwatch.png";
-import cheatdle from "assets/cheatdle.png";
-import pantry from "assets/pantry.png";
-import MCIRetro_Vault from "assets/MCIRetro_Vault.png";
-import CTP from "assets/CTP.jpg";
-import BASTA from "assets/BASTA.jpg";
+// Import images
+import image0 from '/assets/0.jpg';
+import image1 from '/assets/1.JPG';
+import image2 from '/assets/2.JPG';
+import image3 from '/assets/3.jpg';
+import image4 from '/assets/chat.png';
+import quizcreator from '/assets/quizcreator.png';
+import shootingwatch from '/assets/shootingwatch.png';
+import cheatdle from '/assets/cheatdle.png';
+import pantry from '/assets/pantry.png';
+import MCIRetro_Vault from '/assets/MCIRetro_Vault.png';
+import CTP from '/assets/CTP.jpg';
+import BASTA from '/assets/BASTA.jpg';
 
 console.warn = () => {};
 
 function App() {
+  const baseUrl = import.meta.env.BASE_URL;
 
   const imageMap = {
     0: image0,
