@@ -15,7 +15,14 @@ export default defineConfig({
     assetsDir: 'assets',
     rollupOptions: {
       output: {
-        assetFileNames: 'assets/[name][extname]'
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name.endsWith('.jpg') || 
+              assetInfo.name.endsWith('.JPG') || 
+              assetInfo.name.endsWith('.png')) {
+            return 'assets/[name][extname]'
+          }
+          return 'assets/[name]-[hash][extname]'
+        }
       }
     }
   }

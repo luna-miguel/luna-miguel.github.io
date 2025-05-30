@@ -5,18 +5,19 @@ import { useForm } from '@formspree/react';
 import './index.css'
 import React from 'react';
 
-import image0 from "./assets/0.jpg";
-import image1 from "./assets/1.JPG";
-import image2 from "./assets/2.JPG";
-import image3 from "./assets/3.jpg";
-import image4 from "./assets/chat.png";
-import quizcreator from "./assets/quizcreator.png";
-import shootingwatch from "./assets/shootingwatch.png";
-import cheatdle from "./assets/cheatdle.png";
-import pantry from "./assets/pantry.png";
-import MCIRetro_Vault from "./assets/MCIRetro_Vault.png";
-import CTP from "./assets/CTP.jpg";
-import BASTA from "./assets/BASTA.jpg";
+// Import images from public directory
+const image0 = '/assets/0.jpg';
+const image1 = '/assets/1.JPG';
+const image2 = '/assets/2.JPG';
+const image3 = '/assets/3.jpg';
+const image4 = '/assets/chat.png';
+const quizcreator = '/assets/quizcreator.png';
+const shootingwatch = '/assets/shootingwatch.png';
+const cheatdle = '/assets/cheatdle.png';
+const pantry = '/assets/pantry.png';
+const MCIRetro_Vault = '/assets/MCIRetro_Vault.png';
+const CTP = '/assets/CTP.jpg';
+const BASTA = '/assets/BASTA.jpg';
 
 console.warn = () => {};
 
