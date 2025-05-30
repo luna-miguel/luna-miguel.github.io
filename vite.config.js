@@ -12,8 +12,18 @@ export default defineConfig({
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'style.css') return 'assets/[name][extname]';
-          return 'assets/[name][extname]';
+          const info = assetInfo.name.split('.')
+          const ext = info[info.length - 1]
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name)) {
+            return `assets/[name][extname]`
+          }
+          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name)) {
+            return `assets/[name][extname]`
+          }
+          if (ext === 'css') {
+            return `assets/[name][extname]`
+          }
+          return `assets/[name][extname]`
         },
         chunkFileNames: 'assets/[name].js',
         entryFileNames: 'assets/[name].js',
